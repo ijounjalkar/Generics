@@ -15,15 +15,24 @@ public class Generics<T extends Comparable<T>> {
 	
 	public T maxNum() {
 		T test = maxNum(args);
+		printMax(test);
 		return test;
 		
 	}
+	
 	public T maxNum(T...args) {
 		T max;
 		Arrays.sort(args);
 		max = args[args.length - 1];
 		return max;
 	}
+	
+	private static <T> void printMax(T element) {
+		System.out.println("Maximum :" + element);
+		
+		
+	}
+
 	
 	
 	
